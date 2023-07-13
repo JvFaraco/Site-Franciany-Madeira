@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Franciany Madeira | Terapeuta</title>
+    <style>
+        li.nav-item {
+            font-size: 0.5cm;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+            margin-left: 20px;
+
+        }
+
+        a.navbar-brand {
+            font-size: 1cm;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+            margin-right: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+
+        }
+
+        #agendamento {
+            width: 6cm;
+            height: 1.3cm;
+            letter-spacing: 3px;
+            margin-top: 18px;
+            margin-bottom: 15px;
+
+        }
+
+        .franciany_perfil {
+            width: 320px;
+            margin-right: 35px;
+            margin-top: 20px;
+
+        }
+
+        .inicio {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        p {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+            font-size: 18px;
+
+
+        }
+
+        hr {
+            margin-top: 20px;
+
+        }
+
+        .bloco {
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+            border-radius: 20px;
+            background-image: linear-gradient(45deg, rgb(17, 16, 16), #494c50);
+        }
+
+        h2 {
+            margin-top: 30px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 3px;
+            font-size: 16px;
+            color: #c2bfbf;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 6px;
+            font-size: 60px;
+            margin-bottom: 30px;
+
+        }
+
+
+        .blocobackground {
+            background-image: linear-gradient(45deg, rgb(17, 16, 16), #494c50);
+            height: 720px;
+            border: 3px solid black;
+            margin: 10px;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+
+        }
+
+        .blocobackground2 {
+            background-image: linear-gradient(45deg, rgb(17, 16, 16), #494c50);
+            background-size: cover;
+            height: 700px;
+            padding: 30px 50px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        .coluna {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+
+        }
+
+        h4 {
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 3px;
+            font-size: 30px;
+            color: #c2bfbf;
+            text-align: center;
+        }
+
+        .tap_box {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
+
+        .tap_box #botao {
+            font-size: 18px;
+            font-weight: 600;
+            color: #aca6a6;
+            background-color: none;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .content_box {
+            padding: 20px;
+
+        }
+
+        .content_box .content {
+            display: none;
+
+        }
+
+        .content_box .content.active {
+            display: block;
+        }
+
+        .content_box .content h4 {
+            margin-bottom: 10px;
+        }
+
+        .content_box .content .coluna {
+            justify-content: center;
+
+        }
+
+        #botao {
+            margin-top: 30px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 3px;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .formulario {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        #final {
+            width: 30%;
+            justify-content: space-around;
+            flex-direction: column;
+            padding: 10px 45px;
+            background-image: linear-gradient(45deg, rgb(17, 16, 16), #292b2c);
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            border-radius: 20px;
+
+        }
+
+        #final h5 {
+            color: #c9c5c5;
+            font-size: 2.5rem;
+            margin: 1rem;
+            text-align: center;
+            letter-spacing: 6px;
+            word-wrap: break-word;
+        }
+
+        #final form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        form label {
+            color: #c9c5c5;
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        form input {
+            padding: 15px;
+            outline: none;
+            border: 0;
+            margin-bottom: 20px;
+            font-size: 15px;
+            transition: all 0.5s;
+
+        }
+
+        form input:focus {
+            border-radius: 16px;
+        }
+
+        form textarea {
+            padding: 10px;
+            outline: none;
+            border: 0;
+            font-size: 15px;
+            transition: all 0.5s;
+        }
+
+        form textarea:focus {
+            border-radius: 16px;
+        }
+
+        form button {
+            padding: 15px;
+            cursor: pointer;
+            font-size: 25px;
+            letter-spacing: 3px;
+            background: transparent;
+            border: 2px solid #f5f5f5;
+            color: #c9c5c5;
+            transition: all 0.5s;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        form button:hover {
+            background: white;
+            color: #101026;
+            border-radius: 16px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .line {
+            height: 200px;
+            width: 100%;
+            color: #f5f5f5;
+
+        }
+
+        .rodape {
+            width: 100%;
+            background-color: #0c0c0c;
+            padding: 20px 45px
+        }
+
+        #footer_contacts h7 {
+            margin-bottom: 0.75rem;
+        }
+
+        #footer_contacts p {
+            color: white;
+            text-align: start;
+        }
+
+        #footer_social_media {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-link {
+            text-decoration: none;
+        }
+
+        #footer_social_media .footer-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            color: #f5f5f5;
+            transition: all 0.5s;
+        }
+
+        #footer_social_media .footer-link i {
+            font-size: 1.25rem;
+        }
+
+        #footer_social_media .footer-link:hover {
+            opacity: 0.8;
+        }
+
+        #instagram {
+            background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+
+        }
+
+        #whatsapp {
+            background-color: #25d366;
+        }
+
+        h7 {
+            font-size: 1cm;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+            color: #f5f5f5;
+        }
+
+        #footer_final {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #0c0c0c;
+        }
+
+        @media screen and (max-width: 768px) {
+            #footer_content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+
+            }
+        }
+
+        @media screen and (max-width: 426px) {
+            #footer_content {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 3rem 2rem;
+
+            }
+        }
+
+        h8 {
+            color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Franciany
+                Madeira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li style="padding-left: 3cm;" class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#apresentacao">Apresentação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="padding-left:3cm" class="nav-link active" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="padding-left:3cm" class="nav-link active" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <main>
+        <div class="inicio">
+
+            <img class="franciany_perfil" src="https://i.im.ge/2023/07/11/5OK8H1.franciany.png">
+            <h1>
+                <br>Seja muito bem vindo! <br>
+                <a href="{% url 'whatsapp' %}"><button type="button" class="btn btn-outline-success"
+                        id="agendamento">Agendamento</button></a>
+                <p>
+                    Psicogenealogia e Transgeracional
+
+                </p>
+            </h1>
+
+        </div>
+        <hr size="9">
+        <section id="apresentacao">
+            <h3>
+                Apresentação
+            </h3>
+            <div class="bloco">
+                <h2>
+                    Formadora de TERAPEUTAS TRANSGERACIONAIS e PSICOGENEALOGIA® <br>
+                    Ensino TERAPEUTAS a TRANSFORMAR os traumas herdados através do meu método 3R®️
+                </h2>
+            </div>
+            <div class="coluna">
+                <img src="https://i.im.ge/2023/07/11/52wOpK.1-parte.png" class="rounded float-start" alt="Parte 1"
+                    style="height: 776px; width: 100%;">
+                <img src="https://i.im.ge/2023/07/11/52wdK8.2-parte.png" class="rounded center" alt="Parte 2"
+                    style="height: 776px; width: 100%;">
+                <img src="https://i.im.ge/2023/07/11/52wslh.3-parte.png" class="rounded float-end" alt="Parte 3"
+                    style="height: 776px; width: 100%;">
+            </div>
+        </section>
+        <section id="servicos">
+            <div class="blocobackground">
+                <div class="tap_box">
+                    <button type="button" class="btn btn-outline-light" id='botao'> Comunidade Desatando Os Nós</button>
+                    <button type="button" class="btn btn-outline-light" id='botao'> O Que É Esta Comunidade?</button>
+                    <button type="button" class="btn btn-outline-light" id='botao'> Como Será Nossa Jornada? </button>
+                    <button type="button" class="btn btn-outline-light" id='botao'> Como Funcionará? </button>
+                </div>
+                <div class="content_box">
+                    <div class="content">
+                        <h4>Comunidade Desatando Os Nós</h4>
+                        <div class="coluna">
+                            <img src="https://i.im.ge/2023/07/11/52CNFC.desatando-nos-1.png" class="rounded float-start"
+                                alt="Parte 1" style="height: 520px; max-width: 100%; ">
+                            <img src="https://i.im.ge/2023/07/11/52CPjq.desatando-nos-2.png" class="rounded center"
+                                alt="Parte 2" style="height: 520px;max-width: 100%;">
+                            <img src="https://i.im.ge/2023/07/11/52CATP.desatando-nos-3.png" class="rounded float-end"
+                                alt="Parte 3" style="height: 520px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4>O Que É Esta Comunidade?</h4>
+                        <div class="coluna">
+                            <img src="https://i.im.ge/2023/07/11/52EsBf.desatando-nos-4.png" class="rounded center"
+                                alt="Parte 1" style="height: 520px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4>Como Será Nossa Jornada?</h4>
+                        <div class="coluna">
+                            <img src="https://i.im.ge/2023/07/11/52E5XL.desatando-nos-5.png" class="rounded float-start"
+                                alt="Parte 1" style="height: 520px;max-width: 100%;">
+                            <img src="https://i.im.ge/2023/07/11/52E6aJ.desatando-nos-6.png" class="rounded center"
+                                alt="Parte 2" style="height: 520px;max-width: 100%;">
+                            <img src="https://i.im.ge/2023/07/11/52EAw6.desatando-nos-7.png" class="rounded float-end"
+                                alt="Parte 3" style="height: 520px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4>Como Funcionará?</h4>
+                        <div class="coluna">
+                            <img src="https://i.im.ge/2023/07/11/52EYcX.desatando-nos-8.png" class="rounded center"
+                                alt="Parte 1" style="height: 520px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <hr class="line">
+                    </hr>
+                </div>
+        </section>
+        <div class="blocobackground2">
+            <section id="contato">
+                <div id="final">
+                    <div class="formulario">
+                        <h5>
+                            Contato
+                        </h5>
+                        <form action="" method="post">
+                            <label>Nome</label>
+                            <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off">
+                            <br>
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Digite seu email" autocomplete="off">
+                            <br>
+                            <label>Mensagem</label>
+                            <textarea name="message" cols="20" rows="5" placeholder="Digite sua mensagem"></textarea>
+                            <a href="{% url 'obrigado' %}"><button type="button">Enviar</button></a>
+
+                        </form>
+
+                    </div>
+
+
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="rodape">
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h7>Franciany Madeira</h7>
+                <p>Devemos transformar os aspectos negativos em algo construtivo</p>
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/francianymadeira/" class="footer-link" id="instagram"
+                        target="_blank" ;>
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=5548988482713&text=Olá.%20Gostaria%20de%20Informações%20sobre%20atendimento%20em%20Psicogenealogia."
+                        class="footer-link" id="whatsapp" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div id="footer_final">
+                <h8> &#169
+                    2023 todos os direitos reservados </h8>
+            </div>
+
+
+        </div>
+    </footer>
+    <script>
+        const tabs = document.querySelectorAll('#botao');
+        const all_content = document.querySelectorAll('.content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', (e) => {
+                tabs.forEach(tab => { tab.classList.remove('active') });
+                tab.classList.add('active');
+                all_content.forEach(content => { content.classList.remove('active') });
+                all_content[index].classList.add('active');
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
